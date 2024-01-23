@@ -82,7 +82,7 @@ console.log(Boolean(' '));
 console.log(Boolean(0));
 console.log(Boolean('0'));
 
-
+//암시적 형 변환   !!
 
 // 위에 나열한 것 이외의 것들 
 
