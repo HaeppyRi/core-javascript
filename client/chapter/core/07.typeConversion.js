@@ -3,6 +3,12 @@
 /* --------------------- */
 
 
+// let counter = 0;
+
+// const li = document.querySelector(`li:nth-child(${counter++})`);
+
+
+
 /* 데이터 → 문자
 ----------------------------------------------------------- */
 
@@ -19,15 +25,21 @@ console.log( YEAR + '');  // 암시적 형 변환
 let days = null;
 let weekend;
 
+
+
 console.log(days + '');
 console.log(undefined + '');
 
+
+// css animation VS javascript animation
 
 
 // boolean
 let isClicked = false;
 
 console.log(isClicked + '');
+
+
 
 /* 데이터 → 숫자 ----------------------------------------------------------- */
 
@@ -36,9 +48,12 @@ console.log(isClicked + '');
 let friend;
 console.log( Number(friend) );  //NaN. 숫자로서의 변환이 일어나지 않는다.
 
+
 // null
 let money = null;
 console.log( Number(money)); //0
+
+
 
 
 // boolean
@@ -82,7 +97,7 @@ console.log(Boolean(' '));
 console.log(Boolean(0));
 console.log(Boolean('0'));
 
-//암시적 형 변환   !!
+//암시적 형 변환  => !!
 
 // 위에 나열한 것 이외의 것들 
 
@@ -92,7 +107,8 @@ console.clear()
 //데이터 -> 숫자
 
 // const value = prompt('값을 입력해주세요');
-// const value = Number( prompt('값을 입력해주세요') )
+
+// const value = Number(prompt('값을 입력해주세요'))
 // const value = prompt('값을 입력해주세요') / 1
 // const value = prompt('값을 입력해주세요') * 1
 const value = +prompt('값을 입력해주세요')
