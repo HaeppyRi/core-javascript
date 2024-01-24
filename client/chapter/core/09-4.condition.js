@@ -30,4 +30,25 @@ receivedEmailAddress = emailAddress || 'user@company.io';
 // ?? → 첫번째 정의된(defined) 값을 반환
 
 
-//코드 더 적여야함...
+const WIDTH = '10px';
+const boolean = false;
+
+
+console.log( null || WIDTH );
+console.log( null ?? WIDTH );
+
+
+console.log( undefined || WIDTH );
+console.log( undefined ?? WIDTH );
+
+
+console.log( boolean || WIDTH );
+console.log( boolean ?? WIDTH );
+
+
+console.log( '' || WIDTH );
+console.log( '' ?? WIDTH );
+
+
+console.log( 0 || WIDTH );
+console.log( 0 ?? WIDTH );
