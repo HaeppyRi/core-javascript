@@ -19,7 +19,7 @@ const calculateTotal = function(moneyA, moneyB, moneyC, moneyD) {
 
 // 함수 선언 → 화살표 함수 (표현)식
 
-// spread syntax   vs    ...arr      구분 잘 하기~!
+// spread syntax  :    ...arr      구분 잘 하기~!
 
                     // rest parameter
 // let calcAllMoney =( ...args )=>{
@@ -32,14 +32,23 @@ const calculateTotal = function(moneyA, moneyB, moneyC, moneyD) {
 //     //     total += args[i];
 //     // }
 
+
 //     //for ...of
+
 //     // for(let value of args) total += value
 
+
+
 //     //forEach
+
 //     // args.forEach(item => total += item)
 
+
+
 //     //reduce
+
 //     // args.reduce((acc,cur)=> acc + cur,0)
+
 
 //     return args.reduce((acc,cur)=> acc + cur,0)
 
@@ -130,11 +139,70 @@ const user = {
 
 
 
-
+console.clear();
 /* 다음 함수를 작성해봅니다. -------------------------------------------------- */
   
 // pow(numeric: number, powerCount: number): number;
-let pow; 
-  
+let pow = (numeric,powerCount) => {
+
+  let result = 1;
+
+  for(let i = 0; i < powerCount; i++) result *= numeric;
+
+  return result;
+
+}; 
+
+//console.log(pow(2,53));
+
+
+let powExpression = (numeric,powCount)=>{
+
+  return Array(powCount).fill(null).reduce((acc)=>{
+    return acc * numeric
+  },1)
+};
+
+//코드줄이기
+//let powExpression = (numeric,powCount)=> Array(powCount).fill(null).reduce(acc => acc * numeric, 1)
+
+
+
+
+
+
+
+
+
+
+
 // repeat(text: string, repeatCount: number): string;
-let repeat; 
+
+//반복문
+let repeat = (text, repeatCount)=>{
+
+  let result = '';
+  
+  for (let i = 0; i < repeatCount; i++) {
+    result += text;
+  }
+
+  return result;
+}; 
+
+
+//배열의 반복
+
+let repeatExpression = (text, repeatCount) => {
+  return Array(repeatCount).fill(null).reduce((acc)=>{
+    return acc + text
+  }, '')
+};
+
+//줄여쓰기
+//let repeatExpression = (text, repeatCount) =>
+
+
+
+
+//repeat('hello😉',3) //'hello😉hello😉hello😉'
