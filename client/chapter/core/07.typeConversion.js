@@ -18,7 +18,7 @@ const YEAR = 2024;
 
 console.log(String(YEAR));  //명시적 형 변환
 console.log( YEAR + '');  // 암시적 형 변환 
-// console.log( (YEAR + '      ').trim()  );  // 암시적 형 변환
+// console.log( (YEAR + '      ').trim()  );  // 암시적 형 변환(공백제거가능)
 
 
 // undefined, null
@@ -27,14 +27,14 @@ let weekend;
 
 
 
-console.log(days + '');
-console.log(undefined + '');
+console.log(days + ''); //암시적 형 변환
+console.log(undefined + ''); // 암시적 형 변환
 
 
-// css animation VS javascript animation
+// isActive -> css animation VS javascript animation
 
 
-// boolean
+// boolean <= is or has 붙으면 T/F로 값이 나온다. (사용 적음)
 let isClicked = false;
 
 console.log(isClicked + '');
@@ -46,7 +46,7 @@ console.log(isClicked + '');
 // undefined
 
 let friend;
-console.log( Number(friend) );  //NaN. 숫자로서의 변환이 일어나지 않는다.
+console.log( Number(friend) );  //NaN. undefined는 숫자로서의 변환이 일어나지 않는다.
 
 
 // null
@@ -75,11 +75,11 @@ console.log( +num ); // 암시적 형 변환
 // numeric string
 const width = '105.3px';
 
-console.log( Number(width)); //NaN
-console.log( parseInt(width)); //105
-console.log( parseFloat(width)); //105.3
+console.log( Number(width)); //NaN   // 문자가 같이 포함되어있기 때문
+console.log( parseInt(width)); //105  // parseIn(빌트인펑션=내장함수): 정수만
+console.log( parseFloat(width)); //105.3  // parseFloat: 소수까지
 
-// 주의할 점 : 앞에 문자 없도록 해야함/ 
+// 주의할 점 : 앞에 문자 없도록 해야함. ex.10a5.3px -> 10
 
 
 
@@ -91,11 +91,11 @@ console.log( parseFloat(width)); //105.3
 // null, undefined, 0, NaN, ''
 // 빈문자 -> ''  / 공백 문자 -> ' '
 
-console.log(Boolean(friend));
-console.log(Boolean(money));
-console.log(Boolean(' '));
-console.log(Boolean(0));
-console.log(Boolean('0'));
+console.log(Boolean(friend)); //f
+console.log(Boolean(money));  //f
+console.log(Boolean(' '));    //t
+console.log(Boolean(0));      //f
+console.log(Boolean('0'));    //t
 
 //암시적 형 변환  => !!
 
