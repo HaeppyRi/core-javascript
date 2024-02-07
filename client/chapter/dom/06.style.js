@@ -85,6 +85,15 @@ function getCss(node,prop){
 
 
 
+// addClass('.first', 'second')
+
+// removeClass('.first', 'first')
+
+
+
+
+
+
 
 
 
