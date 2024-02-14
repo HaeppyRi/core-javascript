@@ -17,19 +17,21 @@ let undef;
 
 
 // 3. 따옴표를 사용해 묶은 텍스트(큰", 작은', 역`)
-const duble = "hello";  //string literal 방식
+const duble = "hello";  // ⭐️ string literal 방식 ⭐️
 const single = 'hello';
 const backtick = `hello ${undef}`;
 
-// console.log(typeof duble);
-// console.log(typeof single);
-// console.log(typeof backtick);
+// console.log(backtick);
 
-const str = new String('hi!');  // string constructor(생성자) 방식
+
+
+
+
+const str = new String('안녕!');  // ⭐️ string constructor(생성자) 방식 ⭐️
 // console.log(str);
 
 
-// console.log(backtick);
+
 
 // 4. 정수, 부동 소수점 숫자(길이 제약)
 const integer = 150;  // number literal 
@@ -51,9 +53,9 @@ const bigNumber = 123n;
 // 6. 참(true, yes) 또는 거짓(false, no)
 const isClicked = false;
 
-// const bool = new Boolean(false);
-
 // console.log(typeof isClicked);
+
+// const bool = new Boolean(false);
 
 
 // 7. 데이터 컬렉션(collection) 또는 복잡한 엔티티(entity)
@@ -126,9 +128,7 @@ const arr = [1,'a',{nickname:'tiger'},4,()=>{}];
 
 
 // function ---------------------------------------------------------
-
-//상자 함
-//셈 수
+//상자 (함) + 셈 (수) = 함수
 
 
 //function sum(a,b){   //선언
@@ -143,17 +143,20 @@ const arr = [1,'a',{nickname:'tiger'},4,()=>{}];
 
 
 
+
+
+
+
 //  function -> class 
 
 
 function 붕어빵틀(재료){
     return `냠냠 ${재료}맛 붕어빵`
-  }
+}
   
   
-  
-  const 선범 = 붕어빵틀('슈크림');
-  const 태희 = 붕어빵틀('피자');
+const 선범 = 붕어빵틀('슈크림');
+const 태희 = 붕어빵틀('피자');
 
 
 

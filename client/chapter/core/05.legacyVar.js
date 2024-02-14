@@ -10,23 +10,24 @@ let outside = 'outer';
 
 {
   
-  console.log( outside );
-
   console.log(outside);
 
- 
 
   let inside = 'inner';
 
 }
-
-
 
 let inside = 'another'
 
 
 
 
+
+
+
+/* ----------------------------------------------------------------------------
+var는 함수 스코프 안에서만 실행이 가능하다. -> 함수를 바로 실행하기위해 함수 전체 괄호로 묶음(IIFE)
+----------------------------------------------------------------------------- */
 // (function (){
 //   var outside = 'outer'
 //   console.log(outside);
@@ -37,9 +38,7 @@ let inside = 'another'
 
 
 
-// var는 변수의 중복 선언을 허용합니다
-
-
+/* ---- var는 변수의 중복 선언을 허용합니다 ---- */
 
 // var a = 10;
 // var a = 5;
@@ -47,7 +46,7 @@ let inside = 'another'
 
 
 // let b = 30;
-// let b = 50;
+// let b = 50;  //error
 
 
 

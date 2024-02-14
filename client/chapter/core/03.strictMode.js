@@ -13,27 +13,24 @@ let jujeob = '심선범 넌 뭐랄까.. 마치 베를린 같아. 왜냐하면 �
 console.log(jujeob);
 
 
+/* <참고>
+var              //구 변수선언
 
-// var
+let a = 10;      //현 변수선언
+a = 30;
 
-// let a = 10;
-// a = 30;
-
-// const b = 30;
-// b = 50;
-
-
+const b = 30;    //현 상수선언
+b = 50;
 
 
-// int 
-// float 
-// number
+// 자바스크립트는 통일
+int, float => number
 
-// char
-// string
+char => string
+*/
 
-// 
 
 
 // #2
-console.log(globalThis);
+console.log(globalThis); 
+// '엄격모드'에선 나타나지 않음. undefined => '모듈'세계에선 전역변수에 대한 접근을 허락하지 않음.

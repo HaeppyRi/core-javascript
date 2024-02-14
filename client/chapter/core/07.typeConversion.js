@@ -104,6 +104,12 @@ console.log(Boolean('0'));    //t
 console.clear()
 
 
+
+
+
+
+
+
 //데이터 -> 숫자
 
 // const value = prompt('값을 입력해주세요');
@@ -111,6 +117,8 @@ console.clear()
 // const value = Number(prompt('값을 입력해주세요'))
 // const value = prompt('값을 입력해주세요') / 1
 // const value = prompt('값을 입력해주세요') * 1
+
+//재사용성을 고려한다면! 숫자로 쓰일 때/ 문자로 쓰일 때
 const value = +prompt('값을 입력해주세요')
 const numberValue = +value;
 

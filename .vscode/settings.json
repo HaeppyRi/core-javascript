@@ -2,5 +2,8 @@
   "editor.tokenColorCustomizations": {
     "comments": "",
     "textMateRules": []
+  },
+  "[javascript]": {
+    "editor.fontFamily": "FiraCode-Retina, Menlo, Monaco, 'Courier New', monospace"
   }
 } 
