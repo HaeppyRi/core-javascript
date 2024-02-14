@@ -16,6 +16,9 @@ function getCss(node,prop){
   return getComputedStyle(node)[prop]
 }
 
+
+
+
 function setCss(node,prop,value){
 
   if(typeof node === 'string') node = getNode(node);
