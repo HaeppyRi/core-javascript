@@ -50,4 +50,4 @@ console.log('same : ',same)
 // 7. 비교가 종료되었고, 문자열 길이도 같을 경우 두 문자열은 동일함으로 결론 도출
 
 // console.log('Design' <= 'Development');
-// console.log('디자인' <= '개발');
+// console.log('디자인' <= '개발'); 

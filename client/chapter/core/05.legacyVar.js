@@ -20,7 +20,7 @@ let outside = 'outer';
 
 }
 
-
+ 
 
 let inside = 'another'
 
@@ -42,12 +42,12 @@ let inside = 'another'
 
 
 var a = 10;
-var a = 5;
+//var a = 5;
 
 
 
-let b = 30;
-let b = 50;
+// let b = 30;
+// let b = 50;
 
 
 
