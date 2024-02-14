@@ -104,7 +104,7 @@ console.log(Boolean('0'));
 // 위에 나열한 것 이외의 것들 
 
 console.clear()
-
+ 
 
 
 // 데이터 → 숫자
@@ -117,10 +117,6 @@ const numberValue = +value;
 
 
 console.log( numberValue + 50 );
-
-
-
-
 
 
 

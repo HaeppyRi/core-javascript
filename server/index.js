@@ -12,4 +12,4 @@ const params = {
 
 server.start(params);
 
-console.log(globalThis)
+console.log(globalThis);

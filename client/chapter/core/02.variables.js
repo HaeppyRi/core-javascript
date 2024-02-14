@@ -12,7 +12,7 @@ let name; // undefined
 
 name = 'John';
 admin = name;
-
+ 
 
 
 const ourPlanetName = 'Earth';
