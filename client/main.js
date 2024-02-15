@@ -1,20 +1,42 @@
 
 
 
-import { diceAnimation, getNode, getNodes } from './lib/index.js';
+import {
+    getNode, 
+    getNodes, 
+    endScroll, 
+    insertLast,
+    diceAnimation,
+    clearContents,
+    memo,
+} from './lib/index.js';
 
-
+// [phase-1]
 // 1. 주사위 굴리기 버튼을 누르면 diceAnimation() 실행될 수 있도록
-// 2. 같은 버튼 toggle 만들기(isClicked)
-// 3. 바깥 변수 보호하기 (closure)
+// 2. 같은 버튼 toggle 만들기 (isClicked)
+// 3. setInterval 재생 / 정지
+// 4. 바깥 변수 보호하기 (closure)
+// 5. button 활성화 여부 
+
+
+// [phase-2]
+// 1. recordButton 이벤트 바인딩
+// 2. recordListWrapper show / hidden
+// 3. renderRecordItem 함수 만들기
+//    - 주사위 눈 가져오기
+//    - 템플릿 랜더링하기
+//    - 값 계산하기
+
+
+
+// 스크롤 애니메이션 => 누가 스크롤을 가지고 있는지 주체를 정확하게 찾아야함.
+
 
 const [rollingButton, recordButton, resetButton] = getNodes('.buttonGroup > button');
 const recordListWrapper = getNode('.recordListWrapper');
 
-let isClicked = false;
-let stopAnimation;
-
-
+let count = 0;
+let total = 0;
 
 
 // function handleRolligDice(){
@@ -39,15 +61,31 @@ let stopAnimation;
 //     }
 // }
 
+function createItem(value){
+
+    return `
+      <tr>
+        <td>${++count}</td>
+        <td>${value}</td>
+        <td>${total += value}</td>
+      </tr>
+    `
+  }
 
 
-function renderRecordItem(){
+  function renderRecordItem(){
 
-    const 
+    // const cube = getNode('#cube');
+    // const diceValue = Number(cube.dataset.dice)
+    // const diceValue = cube.dataset.dice * 1
+    // const diceValue = cube.dataset.dice / 1
+    const diceValue = +memo('cube').dataset.dice;
+    
+    insertLast('.recordList tbody',createItem(diceValue));
+    endScroll(recordListWrapper)
+  
 }
-
-
-
+  
 
 
 //IIFE
@@ -61,11 +99,16 @@ const handleRolligDice = (() => {
 
         if(!isClicked){
 
-            stopAnimation = setInterval(diceAnimation,100);
-    
+            stopAnimation = setInterval(diceAnimation, 100);
+            recordButton.disabled = true;
+            resetButton.disabled = true;
+
         }else{
     
             clearInterval(stopAnimation);
+            recordButton.disabled = false;
+            resetButton.disabled = false;
+
         }
     
         isClicked = !isClicked;
@@ -81,5 +124,25 @@ function handleRecord(){
 }
 
 
+// 미니 과제 => 만들어주는 함수, 초기화 버튼 클릭시 모든 데이터 날리기 
+
+function handleReset(){
+    // 1. tbody 안에 요소 제거 Node.textcontent = ''. ???
+    // 2. count, total 값 초기화 ?? = 0
+
+    recordListWrapper.hidden = true;
+
+    clearContents('tbody');
+    count = 0;
+    total = 0;
+
+    recordButton.disabled = true;
+    resetButton.disabled = true;
+
+
+}
+
+
 rollingButton.addEventListener('click',handleRolligDice);
-recordButton.addEventListener('click',handleRecord)
+recordButton.addEventListener('click',handleRecord);
+resetButton.addEventListener('click',handleReset);
