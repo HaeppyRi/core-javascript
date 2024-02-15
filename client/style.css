@@ -6,3 +6,10 @@ h1 {
   }
 
   
+  span{
+    position: relative;
+    top: 0;
+    left: 0;
+    display: inline-block;
+    transition: all 1s;
+  }
