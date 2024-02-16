@@ -28,6 +28,15 @@ import {
 //    - 값 계산하기
 
 
+// [phase-3]
+// 1. 생성 함수와 랜더 함수 분리하기 (createItem, renderRecordItem)
+// 2. endScroll 함수 만들기 
+// 3. resetButton 이벤트 바인딩
+// 4. recordListWrapper show / hidden 처리
+// 5. tbody 자식 요소 제거  => node.textContent = ''  || clearContents()
+// 6. count, total값 초기화 
+// 7. recordButton, resetButton 비활성화 (disabled)
+
 
 // 스크롤 애니메이션 => 누가 스크롤을 가지고 있는지 주체를 정확하게 찾아야함.
 
