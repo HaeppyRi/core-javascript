@@ -33,19 +33,3 @@ export const memo = (() => {
 // console.log( memo('cube')  );
 
 // memo('cube') // div#cube   getter
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
