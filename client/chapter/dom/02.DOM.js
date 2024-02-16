@@ -33,8 +33,8 @@ const first = getNode('.first');
 
 const spanList = getNodes('span');
 
-// console.log(first)
-// console.log(spanList)
+// console.log(first);
+// console.log(spanList);
 
 
 
@@ -51,4 +51,4 @@ console.log( first.matches('span') );
 
 
 //h1태그안에 .second라는 자식이 있어?
-console.log( getNode('h1').contains(getNode('.second')) )
+console.log( getNode('h1').contains(getNode('.second')) );

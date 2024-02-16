@@ -51,7 +51,7 @@ const first = getNode('.first');
 console.log( first.nodeType == document.ELEMENT_NODE );
 
 console.log(first.nodeName);
-console.log(first.tagName == 'SPAN');
+console.log(first.tagName === 'SPAN');
 
 
 
@@ -72,6 +72,11 @@ console.log(first.tagName == 'SPAN');
 //first.innerHTML = '' // 전체 삭제
 
 first.innerHTML += '<strong>멋쟁이</strong> 사자처럼'
+
+
+
+
+
 
 
 // - textContent
@@ -111,10 +116,11 @@ first.textContent // getter
 /* global gsap */
 
 gsap.to('h1',{
-    opacity: 0,
-    autpAlpha: 0,
-    rotate: 360,
+    // autoAlpha:0,
+    rotate:360,
+    x:100,
+    y:300,
     repeat:-1,
-    yoyo: true,
+    yoyo:true,
     //duration: 0.5
 })

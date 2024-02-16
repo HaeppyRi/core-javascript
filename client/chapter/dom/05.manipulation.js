@@ -59,7 +59,7 @@ const h1 = getNode('h1');
 
 const template = '<li class="list">영화보기</li>'
 
-h1.insertAdjacentHTML('beforebegin',template)
+// h1.insertAdjacentHTML('afterend',template)
 
 
 
@@ -78,9 +78,10 @@ h1.insertAdjacentHTML('beforebegin',template)
 
 /* ========== 앞으로 수업에서 굉장히 많이 다룰 예정. 반드시 알아두기 ========= */
 //파일 돔 lib-insert에 존재
+
 insertLast(h1, template)
 
-
+// insertLast() // beforeend
 
 
 

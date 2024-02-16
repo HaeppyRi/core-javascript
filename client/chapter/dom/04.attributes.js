@@ -38,17 +38,16 @@ first.setAttribute('data-index','1');
 
 
 
-first.dataset.name = 'tiger'
 
 
-first.removeAttribute('class')
+first.removeAttribute('class');
 
 
 // - elementNode.removeAttribute(name) – 속성값을 지움
 // - elementNode.attributes – 열거 가능한(iterable) 속성 집합을 반환함
 
 
-console.log(  );
+
 
 for(const value of first.attributes){
     console.log( value );
@@ -68,7 +67,7 @@ first.dataset.name = 'tiger'
 
 
 //getter
-console.log( first.dataset.name );
+console.log( first.dataset );
 
 
 
@@ -77,7 +76,7 @@ console.log( first.dataset.name );
 
 first.dataset.animation = 'paused'
 
-if(first.dataset.animation == 'play'){
+if(first.dataset.animation === 'play'){
     //...
 }
 
@@ -91,39 +90,34 @@ console.clear()
 
 
 
+/* --------------------------------------------------
+getAttr('.first','id') //text
+function getAtter(node,prop){
 
-//getAttr('.first','id') //text
-// function getAtter(node,prop){
+    if(typeof node == 'string') node = getNode(node);
+    if(typeof node !== 'string') throw new Error('getAttr 함수의 두 번째 인수는 문자 타입 이어야 합니다.')
 
-//     if(typeof node == 'string') node = getNode(node);
-//     if(typeof node !== 'string') throw new Error('getAttr 함수의 두 번째 인수는 문자 타입 이어야 합니다.')
-
-//     return node.getAttribute(prop)
-// }
-
-
+    return node.getAttribute(prop)
+}
 
 
 
+setAttr('.first','calss','active');
+function setAtter(node,prop,value){
 
-//setAttr('.first','calss','active');
-// function setAtter(node,prop,value){
+    if(typeof node == 'string') node = getNode(node);
+    if(typeof prop !== 'string' || typeof value !== 'string') throw new TypeError('setAttr함수의 두 번째와 세 번째 인수는 문자 타입이어야 합니다.');
+    if(!value) throw new Error('setAttr 함수의 세 번째 인수는 필수 입력값 입니다.');
 
-//     if(typeof node == 'string') node = getNode(node);
-//     if(typeof prop !== 'string' || typeof value !== 'string') throw new TypeError('setAttr함수의 두 번째와 세 번째 인수는 문자 타입이어야 합니다.');
-//     if(!value) throw new Error('setAttr 함수의 세 번째 인수는 필수 입력값 입니다.');
-
-//     node.setAttribute(prop,value);
-// }
+    node.setAttribute(prop,value);
+}
+--------------------------------------------- */
 
 
 
 
 
 
-
-// attr('.second','id','text') //setter
-// attr('.second','id') //getter
 //function attr(node,prop,value){
 
     // if(!value){
@@ -132,24 +126,19 @@ console.clear()
     //     setAtter(node,prop,value)
     // }
 
+    // ⬇️ ⬇️
+
 
     // if(!value){
-    //     return getAtter(node,prop)
+    // return getAttr(node,prop)
     // }
-    // setAtter(node,prop,value)
-
-
-
-    // const attr = (node,prop,value) => !value ? getAttr(node,prop) : setAttr(node,prop,value)
-  
-    // return attr
-
-
+    // return !value ? getAttr(node,prop) : setAttr(node,prop,value)
 //}
 
 
 
-
+attr('.second','id','text') //setter
+attr('.second','id') //getter
 
 
 

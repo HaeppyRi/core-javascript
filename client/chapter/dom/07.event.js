@@ -58,8 +58,8 @@ const ball = getNode('#ball');
 
 function handleBall({ offsetX:x, offsetY:y }){
 
-        //↑
-    //구조분해할당
+        // ⬆️
+    //    구조분해할당
     // const { offsetX:x, offsetY:y } = e;
 
       // ↑
@@ -77,8 +77,7 @@ function handleBall({ offsetX:x, offsetY:y }){
 
 
 
-function debounce(callback,limit){
-
+function debounce(callback,limit = 1000){
     let timeout;
   
     return function (e){
@@ -88,7 +87,9 @@ function debounce(callback,limit){
       timeout = setTimeout(() => {
         
         callback.call(this,e)
+
       }, limit);
+      
     }
 }
   

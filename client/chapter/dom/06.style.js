@@ -9,7 +9,6 @@ const first = getNode('.first');
 
 // - className – 클래스 전체를 문자열 형태로 반환해주는 프로퍼티로 클래스 전체를 관리할 때 유용
 
-
 console.log(first.calssName); //getter
 
 // first.calssName = 'fff' //setter
@@ -19,9 +18,15 @@ console.log(first.calssName); //getter
 
 // - classList – 클래스 하나를 관리할 수 있게 해주는 메서드로 개별 클래스를 조작할 때 유용
 
-first.classList.add("hello");
-first.classList.remove("hello");
-//first.classList.toggle('is-active')
+first.classList.add('hello');
+first.classList.remove('hello');
+//first.classList.toggle('is-active');
+console.log( first.classList.contains('hello') );
+
+
+
+
+
 
 
 
@@ -38,32 +43,11 @@ first.style.cssText = `
     border: 1px dotted red;
 `
 
-console.log( getComputedStyle(first)['backgroundColor'])
 
+first.style.background = 'orange'; // setter
+/* global getCss, setCss */
 
-
-
-
-function getCss(node,prop){
-  
-    if(typeof node === 'string') node = getNode(node);
-    if(!(prop in document.body.style)) throw new SyntaxError('getCss 함수의 두 번째 인수는 유효한 css 속성이 아닙니다.');
-  
-    return getComputedStyle(node)[prop]
-  }
-  
-  function setCss(node,prop,value){
-  
-    if(typeof node === 'string') node = getNode(node);
-    if(!(prop in document.body.style)) throw new SyntaxError('setCss 함수의 두 번째 인수는 유효한 css 속성이 아닙니다.');
-    if(!value) throw new Error('setCss 함수의 세 번째 인수는 필수 입력값 입니다.');
-    
-    node.style[prop] = value;
-  }
-  
-  
-  
-  const css = (node,prop,value) => !value ? getCss(node,prop) : setCss(node,prop,value)
+console.log( getComputedStyle(first)['backgroundColor']); // getter
 
 
 
@@ -81,13 +65,12 @@ function getCss(node,prop){
 
 
 
-//css()
+// css()
 
 
 
-// addClass('.first', 'second')
 
-// removeClass('.first', 'first')
+// removeClass('.first'); 모든 클래스 제거
 
 
 
