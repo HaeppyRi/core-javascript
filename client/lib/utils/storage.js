@@ -21,16 +21,10 @@ export function setStorage(key,value){
     })
 }
 
-setStorage('user',{name:'haeri'})
 
-// localStorage.setItem('user',JSON.stringify({name:'haeri', age:28}));
-
-// console.log( JSON.parse(localStorage.getItem('user')) );
 
 
 export function getStorage(key){
-
-
 
     return new Promise((resolve,reject)=>{
 
@@ -44,21 +38,13 @@ export function getStorage(key){
 }
 
 
-const data = await getStorage('user')
-
-// console.log(data) //{name:'haeri'}
-getStorage('user') //{name:'haeri'}
-
-
-
 
 export function deleteStorage(key){
     return new Promise((resolve, reject) => {
       !key ? storage.clear() : storage.removeItem(key);
       resolve();
     })
-  }
+}
 
-// deleteStorage('user')
 
 

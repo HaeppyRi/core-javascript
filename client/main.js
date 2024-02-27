@@ -25,19 +25,14 @@ const handleTextField = (e) => {
     setStorage('text',value);
 }
   
-  
-const handleClear = () => {
-  
-    deleteStorage('text').then(()=>{
-  
-    clearContents(textField)
-      
-    })
-    
-}
+const handleClear = () => deleteStorage('text').then(clearContents(textField))
+// const handleClear = () => {
+//     deleteStorage('text').then(()=>{
+//     clearContents(textField)
+//     })
+// }
   
 textField.addEventListener('input',handleTextField);
-  
 clear.addEventListener('click',handleClear);
   
   

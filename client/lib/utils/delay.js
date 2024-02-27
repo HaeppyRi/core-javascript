@@ -237,26 +237,3 @@ async function getData(){
 
 
 // getData()
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
